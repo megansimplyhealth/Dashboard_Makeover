@@ -9,7 +9,7 @@ export default function Home() {
       
 
       <main>
-         <a href="./layout" className={styles.card}>
+         <a href="./dashboardHome" className={styles.card}>
             <h3>components</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
