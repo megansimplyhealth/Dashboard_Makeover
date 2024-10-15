@@ -1,6 +1,7 @@
 import React from "react"
 import Image from 'next/image';
 import 'tailwindcss/tailwind.css'
+import SearchBar from '../componets/searchBar'
 
 export default function DashboardHome() {
     return (
@@ -48,13 +49,10 @@ export default function DashboardHome() {
 
         {/* search bar */}
         <div className="absolute px-10 py-1 z-10 w-full mt-56 border-t-2 border-grey-2">
-          <div className="flex items-center justify-center py-2 text-5x1 mt-2">
-            <input
-              type="text"
-              className="text-leaf-green text-center bg-white p-2 rounded-lg w-1/2"
-              placeholder="{SEARCH ICON} Search for patients, reports, settings..."
-              placeholder-color="#006633"
-            />
+          <div className="flex items-center justify-center w-full mt-2">
+            <div className="w-2/5">
+              <SearchBar placeholder="Search for patients, reports, settings..." onChange={() => {}} />
+            </div>
           </div>
         </div>
 
