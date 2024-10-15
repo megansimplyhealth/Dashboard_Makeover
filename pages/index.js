@@ -3,6 +3,8 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import 'tailwindcss/tailwind.css'
 import SearchBar from '../componets/searchBar'
+import NavigationBar from '../componets/navigationBar'
+import AccountAvatar from "../componets/accountAvatar";
 
 export default function Home() {
   return (
@@ -10,8 +12,15 @@ export default function Home() {
       <a href="./dashboardHome" className="m-16 text-3xl">
           <h3>DASHBOARD HOME</h3>
           <p>Click to view home</p>
-      </a>      
-      <SearchBar placeholder="Search for patients, reports, settings..."/>
+      </a>     
+      <div className="p-10">
+
+        
+        <AccountAvatar lastName="Knaresborough" role="Dentist" />
+      </div>
+      <div className="p-10">
+        <NavigationBar />
+      </div>
     </div>
   );
 }

@@ -2,6 +2,8 @@ import React from "react"
 import Image from 'next/image';
 import 'tailwindcss/tailwind.css'
 import SearchBar from '../componets/searchBar'
+import NavigationBar from '../componets/navigationBar'
+import AccountAvatar from "../componets/accountAvatar";
 
 export default function DashboardHome() {
     return (
@@ -14,14 +16,16 @@ export default function DashboardHome() {
             <Image
               src="/images/Denplan-logo.png"
               alt="Denplan Logo"
-              width={135}
-              height={50}
+              width={161}
+              height={61}
             />
             </div>
-            <div className="flex items-center text-gray-500">
-              <span className="p-2 mr-96">navigation</span>
-              <span className="p-2">My Account</span>
-              <div className="bg-center bg-cover bg-no-repeat rounded-full inline-block h-12 w-12 ml-2"></div>
+            <div className="flex items-center">
+              <NavigationBar />
+            </div>
+
+            <div className="flex items-center">
+              <AccountAvatar lastName="Knaresborough" role="Dentist" />
             </div>
           </div>
         </div>
