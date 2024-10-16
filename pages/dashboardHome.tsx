@@ -37,21 +37,25 @@ export default function DashboardHome() {
         </div>
 
         {/* banner */}
-        <div className="absolute h-32 w-full mt-20">
+        <div className="absolute h-32 w-full mt-24">
           <DynamicBanner image={[{src: '/images/denplan-bike.png', link: null}, {src: "/images/DenplanSummit2025.png", link: "https://www.denplan.co.uk/dentists/events/the-denplan-summit-2025.html"}]} />
         </div>
 
+        <div className="absolute w-full mt-64 border-t-2 border-leaf-green-40"/>
+
         {/* search bar */}
-        <div className="absolute px-10 py-1 z-10 w-full mt-56 border-t-2 border-leaf-green-40">
+        <div className="absolute px-10 py-1 z-10 w-full mt-64">
+          <div className="flex items-center justify-center w-full mt-4"/>
           <div className="flex items-center justify-center w-full mt-2">
             <div className="w-2/5 bg-white rounded-full">
               <SearchBar placeholder="Search for patients, reports, settings..." onChange={() => {}} />
             </div>
           </div>
+          
         </div>
 
         {/* content section */}
-        <div className="flex justify-center items-center flex-row pt-80 px-10 pb-4">         
+        <div className="flex justify-center items-center flex-row pt-[23rem] px-10 pb-4">         
           <div className="w-10/12">
             <div className="flex flex-row">
               <div className="bg-no-repeat border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
@@ -68,7 +72,11 @@ export default function DashboardHome() {
               <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12">
                 APP THREE
               </div>
-              <div className="border border-leaf-green rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12" style={{ backgroundImage: `url("../images/quality-man-card.png")` }}>
+              <div className="border border-leaf-green rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12" style={{ 
+                backgroundImage: `url("../images/quality-man-card.png")`,
+                backgroundRepeat: 'no-repeat', 
+                backgroundSize: 'cover',
+                backgroundColor: 'white'}}>
                 <AppCard title={"Quality Manuals"} subTitle={"Helping you stay compliant"} description={"You can view, download and personalise our documents, manuals and guides for your own needs."} buttonText={"View manuals"} />
               </div>
                 <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12">
@@ -77,5 +85,23 @@ export default function DashboardHome() {
             </div>
           </div>
         </div>
+
+        {/* footer */}
+        <div className="absolute bg-background-grey px-10 py-1 z-10 w-full mt-6 border-t-2 border-leaf-green-40">
+          <div className="flex items-center justify-between py-2 text-5x1 mt-2 bg-background-grey">
+            <div className="flex bg-background-grey">
+            
+            </div>
+            <div className="flex items-center mr-2 bg-background-grey">
+              <Image
+                src="/images/Denplan-B-Corp-Footer.png"
+                alt="Denplan Logo"
+                width={260}
+                height={80}
+              />
+            </div>
+          </div>
+        </div>
+
       </div>
     );}
