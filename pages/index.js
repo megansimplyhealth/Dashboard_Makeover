@@ -5,6 +5,7 @@ import 'tailwindcss/tailwind.css'
 import SearchBar from '../componets/searchBar'
 import NavigationBar from '../componets/navigationBar'
 import AccountAvatar from "../componets/accountAvatar";
+import PictureTextButton from "../componets/textButton";
 
 export default function Home() {
   return (
@@ -14,9 +15,9 @@ export default function Home() {
           <p>Click to view home</p>
       </a>     
       <div className="p-10">
-
-        
-        <AccountAvatar lastName="Knaresborough" role="Dentist" />
+      <div className="bg-transparent rounded-full">
+        <PictureTextButton  onClick={() => {}} image="/images/ic-qualityManuals.png" text="View Quality manuals" />
+      </div>
       </div>
       <div className="p-10">
         <NavigationBar />

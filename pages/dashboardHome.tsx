@@ -7,6 +7,9 @@ import AccountAvatar from "../componets/accountAvatar";
 import { IconButton } from "@material-ui/core";
 import { ArrowBackOutlined, ArrowForwardOutlined } from '@material-ui/icons';
 import DynamicBanner from "../componets/dynamicBanner";
+import TextButton from "../componets/textButton";
+import App from "next/app";
+import AppCard from "../componets/appCard";
 
 export default function DashboardHome() {
     return (
@@ -36,40 +39,6 @@ export default function DashboardHome() {
         {/* banner */}
         <div className="absolute h-32 w-full mt-20">
           <DynamicBanner image={[{src: '/images/denplan-bike.png', link: null}, {src: "/images/DenplanSummit2025.png", link: "https://www.denplan.co.uk/dentists/events/the-denplan-summit-2025.html"}]} />
-          {/* <div className="col-span-1 h-28 p-2 ml-16 mt-1">
-            
-            <p className="text-left leading-none">
-            <strong className="text-3xl text-black">Practice news</strong><br />
-            <span className="text-xs text-grey-4 leading-none">Stay on top of all upcoming events, practice <br />revenue statistics and marketing tips.</span>
-            </p>
-
-            <div className="flex space-x-2 mt-2">
-              <IconButton type="button" className="rounded-full border border-grey-2 shadow-lg w-8 h-8 flex items-center justify-center" onClick={() => {}}>
-                <ArrowBackOutlined  />
-              </IconButton>
-              <IconButton type="button" className="rounded-full border border-grey-2 shadow-lg w-8 h-8 flex items-center justify-center" onClick={() => {}}>
-                <ArrowForwardOutlined />
-              </IconButton>
-            </div>
-          </div>
-
-          <div className="rounded-xl col-span-3 h-32 flex items-center justify-center mr-16 mt-1">
-          <Image
-              src="/images/denplan-bike.png"
-              alt="Denplan Summit 2025 Event Banner"
-              width={650}
-              height={50}
-              className="rounded-xl mr-5 border border-grey shadow-lg"
-            />
-            <Image
-              src="/images/DenplanSummit2025.png"
-              alt="Denplan Summit 2025 Event Banner"
-              width={650}
-              height={50}
-              className="rounded-xl ml-5 border border-grey shadow-lg"
-            />
-            
-          </div> */}
         </div>
 
         {/* search bar */}
@@ -100,11 +69,11 @@ export default function DashboardHome() {
                 APP THREE
               </div>
               <div className="border border-leaf-green rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12">
-                Quality manuals
+                <AppCard title={"Quality Manuals"} image={""} subTitle={"Helping you stay compliant"} description={"You can view, download and personalise our documents, manuals and guides for your own needs."}  />
               </div>
-              <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12">
-                APP FIVE
-              </div>
+                <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12">
+                  APP FIVE
+                </div>
             </div>
           </div>
         </div>
