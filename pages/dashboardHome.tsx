@@ -7,7 +7,7 @@ import AccountAvatar from "../componets/accountAvatar";
 
 export default function DashboardHome() {
     return (
-      <div className="bg-apple-green-20 min-h-screen">
+      <div className="bg-background-grey min-h-screen">
         
         {/* header */}
         <div className="absolute text-leaf-green px-10 py-1 z-10 w-full">
@@ -46,13 +46,13 @@ export default function DashboardHome() {
           </div>
 
           <div className="rounded-xl col-span-3 h-32 flex items-center justify-center mr-16 mt-1">
-          <Image
+          {/* <Image
               src="/images/denplan-bike.png"
               alt="Denplan Summit 2025 Event Banner"
               width={650}
               height={50}
               className="rounded-xl mr-5 border border-grey"
-            />
+            /> */}
             <Image
               src="/images/DenplanSummit2025.png"
               alt="Denplan Summit 2025 Event Banner"
@@ -65,7 +65,7 @@ export default function DashboardHome() {
         </div>
 
         {/* search bar */}
-        <div className="absolute px-10 py-1 z-10 w-full mt-56 border-t-2 border-grey-2">
+        <div className="absolute px-10 py-1 z-10 w-full mt-56 border-t-2 border-leaf-green-40">
           <div className="flex items-center justify-center w-full mt-2">
             <div className="w-2/5">
               <SearchBar placeholder="Search for patients, reports, settings..." onChange={() => {}} />
@@ -83,7 +83,7 @@ export default function DashboardHome() {
               </div>
 
               <div className="bg-no-repeat border border-leaf-green rounded-xl w-5/12 ml-2 p-6" >
-                <p className="text-5xl ">APP <br/><strong>TWO</strong></p>
+                <p className="text-5xl ">Paitnet chart <br/><strong>Include sign pateint up button</strong></p>
                 <a href="" className="text-xl text-leaf-green-60 underline hover:no-underline inline-block rounded-full mt-12 px-8 py-2"><strong>CLICK</strong></a>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function DashboardHome() {
                 APP THREE
               </div>
               <div className="border border-leaf-green rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12">
-                APP FOUR
+                Quality manuals
               </div>
               <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12">
                 APP FIVE
