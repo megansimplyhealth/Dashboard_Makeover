@@ -68,8 +68,8 @@ export default function DashboardHome() {
               <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12">
                 APP THREE
               </div>
-              <div className="border border-leaf-green rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12">
-                <AppCard title={"Quality Manuals"} image={""} subTitle={"Helping you stay compliant"} description={"You can view, download and personalise our documents, manuals and guides for your own needs."}  />
+              <div className="border border-leaf-green rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12" style={{ backgroundImage: `url("../images/quality-man-card.png")` }}>
+                <AppCard title={"Quality Manuals"} subTitle={"Helping you stay compliant"} description={"You can view, download and personalise our documents, manuals and guides for your own needs."} buttonText={"View manuals"} />
               </div>
                 <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12">
                   APP FIVE
