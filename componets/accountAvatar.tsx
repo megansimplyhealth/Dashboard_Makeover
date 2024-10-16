@@ -14,7 +14,7 @@ interface AccountAvatarProps {
 const AccountAvatar = (props: AccountAvatarProps) => {
 
     return (
-        <div className="bg-white rounded-full flex justify-center items-center w-full h-full">
+        <div className="bg-white rounded-full flex justify-center items-center w-full h-full border border-grey shadow-lg">
             <div className="flex items-center">
                 <div className="relative">
                     <Image

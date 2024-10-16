@@ -12,10 +12,10 @@ const SearchBar = (props: SearchBarProps) => {
 
 
     return (
-      <div className="bg-white rounded-full flex justify-center items-center w-full">
+      <div className="bg-white rounded-full flex justify-center items-center w-full border border-grey shadow-lg">
         <div className="bg-white relative flex rounded-full w-full">
 
-          <select className="bg-white text-lg text-gray-2 rounded-full bg-transparent ml-2 mr-2">
+          <select className="text-lg text-gray-2 rounded-full bg-transparent ml-2 mr-2">
             <option className="text-base cursor-pointer" value="All">All</option>
             <option className="text-base cursor-pointer" value="Patients">Patients</option>
             <option className="text-base cursor-pointer" value="Reports">Reports</option>
@@ -23,7 +23,7 @@ const SearchBar = (props: SearchBarProps) => {
           </select>
 
           <TextField
-            className="flex w-full bg-white text-gray-2 "
+            className="flex w-full bg-transparent text-gray-2 "
             placeholder={props.placeholder}
             onChange={props.onChange}
             InputProps={{

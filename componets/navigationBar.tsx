@@ -11,7 +11,7 @@ interface NavProps {
 const NavigationBar = (props: NavProps) => {
 
     return (
-        <div className="bg-white rounded-full flex justify-center items-center px-4" style={{ height: '58px' }}>
+        <div className="bg-white border border-grey shadow-lg rounded-full flex justify-center items-center px-4" style={{ height: '58px' }}>
             <div className="relative flex rounded-full w-1/4 ml-2 ">
                 <IconButton type="button" className="w-full rounded-l-md hover:bg-apple-green">
                     <HomeOutlined />

@@ -4,6 +4,9 @@ import 'tailwindcss/tailwind.css'
 import SearchBar from '../componets/searchBar'
 import NavigationBar from '../componets/navigationBar'
 import AccountAvatar from "../componets/accountAvatar";
+import { IconButton } from "@material-ui/core";
+import { ArrowBackOutlined, ArrowForwardOutlined } from '@material-ui/icons';
+import DynamicBanner from "../componets/dynamicBanner";
 
 export default function DashboardHome() {
     return (
@@ -31,8 +34,9 @@ export default function DashboardHome() {
         </div>
 
         {/* banner */}
-        <div className="absolute grid grid-cols-4 gap-4 h-32 w-full mt-20">
-          <div className="col-span-1 h-28 p-2 ml-16 mt-1">
+        <div className="absolute h-32 w-full mt-20">
+          <DynamicBanner image={[{src: '/images/denplan-bike.png', link: null}, {src: "/images/DenplanSummit2025.png", link: "https://www.denplan.co.uk/dentists/events/the-denplan-summit-2025.html"}]} />
+          {/* <div className="col-span-1 h-28 p-2 ml-16 mt-1">
             
             <p className="text-left leading-none">
             <strong className="text-3xl text-black">Practice news</strong><br />
@@ -40,34 +44,38 @@ export default function DashboardHome() {
             </p>
 
             <div className="flex space-x-2 mt-2">
-              <button className="rounded-full border border-grey-4 text-grey-4 w-8 h-8 flex items-center justify-center" onClick={() => {}}>{"<"}</button>
-              <button className="rounded-full border border-grey-4 text-grey-4 w-8 h-8 flex items-center justify-center" onClick={() => {}}>{">"}</button>
+              <IconButton type="button" className="rounded-full border border-grey-2 shadow-lg w-8 h-8 flex items-center justify-center" onClick={() => {}}>
+                <ArrowBackOutlined  />
+              </IconButton>
+              <IconButton type="button" className="rounded-full border border-grey-2 shadow-lg w-8 h-8 flex items-center justify-center" onClick={() => {}}>
+                <ArrowForwardOutlined />
+              </IconButton>
             </div>
           </div>
 
           <div className="rounded-xl col-span-3 h-32 flex items-center justify-center mr-16 mt-1">
-          {/* <Image
+          <Image
               src="/images/denplan-bike.png"
               alt="Denplan Summit 2025 Event Banner"
               width={650}
               height={50}
-              className="rounded-xl mr-5 border border-grey"
-            /> */}
+              className="rounded-xl mr-5 border border-grey shadow-lg"
+            />
             <Image
               src="/images/DenplanSummit2025.png"
               alt="Denplan Summit 2025 Event Banner"
               width={650}
               height={50}
-              className="rounded-xl ml-5 border border-grey"
+              className="rounded-xl ml-5 border border-grey shadow-lg"
             />
             
-          </div>
+          </div> */}
         </div>
 
         {/* search bar */}
         <div className="absolute px-10 py-1 z-10 w-full mt-56 border-t-2 border-leaf-green-40">
           <div className="flex items-center justify-center w-full mt-2">
-            <div className="w-2/5">
+            <div className="w-2/5 bg-white rounded-full">
               <SearchBar placeholder="Search for patients, reports, settings..." onChange={() => {}} />
             </div>
           </div>
