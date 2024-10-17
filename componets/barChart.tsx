@@ -1,133 +1,85 @@
+import React from 'react';
+import { Bar } from 'react-chartjs-2';
 import {
-    Card,
-    CardBody,
-    CardHeader,
-    Typography,
-  } from "@material-tailwind/react";
-  import Chart from "react-apexcharts";
-  import { Square3Stack3DIcon } from "@heroicons/react/24/outline";
-   
-  // If you're using Next.js please use the dynamic import for react-apexcharts and remove the import from the top for the react-apexcharts
-  // import dynamic from "next/dynamic";
-  // const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
-   
-  const chartConfig = {
-    type: "bar",
-    height: 240,
-    series: [
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+  ChartData,
+  ChartOptions,
+} from 'chart.js';
+
+// Register necessary components from Chart.js
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+
+
+interface BarChartProps {
+    months: string[];
+    patientNumbers: number[];
+  }
+
+const generateColors = (count: number): string[] => {
+  const baseColors = [
+    'rgba(194, 224, 132, 0.8)',  // apple-green-60
+    'rgba(101, 163, 133, 0.8)',  // leaf-green-60
+    'rgba(203, 224, 213, 0.8)',  // apple-green-20
+    'rgba(148, 203, 134, 0.8)',  // secondary-green-60
+  ];
+
+  const colors = Array.from({ length: count }, (_, i) => baseColors[i % baseColors.length]);
+  return colors;
+};
+
+const BarChart = (props: BarChartProps) => {
+  const colors = generateColors(props.months.length);
+
+  const data: ChartData<'bar'> = {
+    labels: props.months,
+    datasets: [
       {
-        name: "Sales",
-        data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+        label: 'Number Of Active Patients',
+        data: props.patientNumbers,
+        backgroundColor: colors,
+        borderColor: colors.map((color) => color.replace('0.8', '1.0')),
+        borderWidth: 1,
       },
     ],
-    options: {
-      chart: {
-        toolbar: {
-          show: false,
-        },
-      },
-      title: {
-        show: "",
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      colors: ["#020617"],
-      plotOptions: {
-        bar: {
-          columnWidth: "40%",
-          borderRadius: 2,
-        },
-      },
-      xaxis: {
-        axisTicks: {
-          show: false,
-        },
-        axisBorder: {
-          show: false,
-        },
-        labels: {
-          style: {
-            colors: "#616161",
-            fontSize: "12px",
-            fontFamily: "inherit",
-            fontWeight: 400,
-          },
-        },
-        categories: [
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec",
-        ],
-      },
-      yaxis: {
-        labels: {
-          style: {
-            colors: "#616161",
-            fontSize: "12px",
-            fontFamily: "inherit",
-            fontWeight: 400,
-          },
-        },
-      },
-      grid: {
-        show: true,
-        borderColor: "#dddddd",
-        strokeDashArray: 5,
-        xaxis: {
-          lines: {
-            show: true,
-          },
-        },
-        padding: {
-          top: 5,
-          right: 20,
-        },
-      },
-      fill: {
-        opacity: 0.8,
-      },
-      tooltip: {
-        theme: "dark",
-      },
-    },
   };
-   
-  export default function Example() {
-    return (
-      <Card>
-        <CardHeader
-          floated={false}
-          shadow={false}
-          color="transparent"
-          className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
-        >
-          <div className="w-max rounded-lg bg-gray-900 p-5 text-white">
-            <Square3Stack3DIcon className="h-6 w-6" />
-          </div>
-          <div>
-            <Typography variant="h6" color="blue-gray">
-              Bar Chart
-            </Typography>
-            <Typography
-              variant="small"
-              color="gray"
-              className="max-w-sm font-normal"
-            >
-              Visualize your data in a simple way using the
-              @material-tailwind/react chart plugin.
-            </Typography>
-          </div>
-        </CardHeader>
-        <CardBody className="px-2 pb-0">
-          <Chart {...chartConfig} />
-        </CardBody>
-      </Card>
-    );
-  }
+
+  const options: ChartOptions<'bar'> = {
+    responsive: true,
+    plugins: {
+        legend: {
+            display: false, // disable the key
+        },
+        title: {
+            display: false,
+            text: ' ',
+          },
+        },
+        scales: {  // hides grid lines
+          y: {
+            grid: {
+              display: false,
+            },
+          },
+          x: {
+            grid: {
+              display: false,
+            },
+          },
+        },
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto mt-10">
+      {/* <h2 className="text-2xl font-bold text-center mb-4">Bar Chart Title</h2> */}
+      <Bar data={data} options={options} />
+    </div>
+  );
+};
+
+export default BarChart;
