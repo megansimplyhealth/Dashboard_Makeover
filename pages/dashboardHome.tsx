@@ -27,7 +27,7 @@ export default function DashboardHome() {
               height={61}
             />
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center ml-40">
               <NavigationBar />
             </div>
 
