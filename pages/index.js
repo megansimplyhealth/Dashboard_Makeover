@@ -38,10 +38,24 @@ export default function Home() {
                 <span className="bg-red-300 text-xl text-leaf-green inline-block rounded-full mt-12 px-8 py-2"><strong>CLICK</strong></span>
               </div>
 
-              <div className="bg-no-repeat border border-leaf-green rounded-xl w-5/12 ml-2 p-6" >
-                {/* <p className="text-5xl ">Paitnet chart <br/><strong>Include sign pateint up button</strong></p> */}
-                 <BarChart months={['Jan', 'Feb', 'Mar', 'Apr', 'May']} patientNumbers={[2000, 1900, 2010, 2040, 2003]}/>
+              <div className="bg-white border border-leaf-green rounded-xl w-5/12 ml-2 p-6">
+                <div className="flex justify-between items-center">
+                  <p className="text-left leading-none">
+                    <strong className="text-4xl text-leaf-green leading-none">2,000</strong><br />
+                    <span className="text-lg text-leaf-green-80 leading-none">Current Active Patients</span>
+                  </p>
+                  <button className="bg-apple-green rounded-full shadow-lg text-white text-lg py-2 px-4">
+                    New Patient
+                  </button>
+                </div>
+                <div className="mt-6">
+                  <BarChart 
+                    months={['Jan', 'Feb', 'Mar', 'Apr', 'May']} 
+                    patientNumbers={[2000, 1900, 2010, 2040, 2003]} 
+                  />
+                </div>
               </div>
+
               
             </div>
             </div> 

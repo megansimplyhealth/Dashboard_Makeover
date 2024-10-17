@@ -19,7 +19,7 @@ const TextButton = (props: TextButtonProps) => {
     };
 
     return (
-        <div className="bg-apple-green border border-apple-green shadow-lg rounded-full flex justify-center items-center h-14 w-6/12">
+        <div className="bg-apple-green shadow-lg rounded-full flex justify-center items-center h-14 w-6/12">
             <div className="flex items-center ml-2">
                 <Button onClick={props.onClick} className="text-left leading-none">
                     <strong className="text-base text-black">

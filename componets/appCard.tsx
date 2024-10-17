@@ -24,11 +24,11 @@ const AppCard = (props: CardProps) => {
                 <strong className="text-lg text-leaf-green">{props.subTitle}</strong><br />
                 {/* <span className="text-base text-leaf-green leading-none">{props.description}</span> */}
             </p>
-            <div className="flex justify-end items-center mt-6"/>
-            <div className="flex justify-end items-center mt-20">
-                <div className="flex rounded-full items-center justify-center bg-apple-green border border-apple-green shadow-lg h-8 w-32">
-                    <Button style={{fontSize: 15, color: "white", textTransform: "capitalize", fontWeight: "bold"}} onClick={() => {}}>{props.buttonText}</Button>
-                </div>
+            <div className="flex bg-transparent justify-end items-center mt-6"/>
+            <div className="flex bg-transparent justify-end items-center mt-20">
+                <button className="bg-apple-green rounded-full shadow-lg text-white text-lg py-2 px-4 font-bold" onClick={() => {}}>
+                    {props.buttonText}
+                </button>
             </div>
         </div>
     );

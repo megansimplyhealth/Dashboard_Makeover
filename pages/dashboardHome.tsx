@@ -10,6 +10,7 @@ import DynamicBanner from "../componets/dynamicBanner";
 import TextButton from "../componets/textButton";
 import App from "next/app";
 import AppCard from "../componets/appCard";
+import BarChart from "../componets/barChart";
 
 export default function DashboardHome() {
     return (
@@ -64,8 +65,21 @@ export default function DashboardHome() {
               </div>
 
               <div className="bg-no-repeat border border-leaf-green rounded-xl w-5/12 ml-2 p-6" >
-                <p className="text-5xl ">Paitnet chart <br/><strong>Include sign pateint up button</strong></p>
-                <a href="" className="text-xl text-leaf-green-60 underline hover:no-underline inline-block rounded-full mt-12 px-8 py-2"><strong>CLICK</strong></a>
+              <div className="flex justify-between items-center">
+                  <p className="text-left leading-none">
+                    <strong className="text-5xl text-leaf-green leading-none font-bold">2,134</strong><br />
+                    <span className="text-xl text-leaf-green-80 leading-none font-bold">Currently Active Patients</span>
+                  </p>
+                  <button className="bg-apple-green rounded-full shadow-lg text-white text-lg font-bold py-2 px-4">
+                    + Sign New
+                  </button>
+                </div>
+                <div className="mt-6">
+                  <BarChart 
+                    months={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']} 
+                    patientNumbers={[2000, 1900, 2010, 2040, 2003, 2134]} 
+                  />
+                </div>
               </div>
             </div>
             <div className="flex flex-row h-64 mt-6">

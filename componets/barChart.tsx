@@ -25,7 +25,7 @@ const generateColors = (count: number): string[] => {
   const baseColors = [
     'rgba(194, 224, 132, 0.8)',  // apple-green-60
     'rgba(101, 163, 133, 0.8)',  // leaf-green-60
-    'rgba(203, 224, 213, 0.8)',  // apple-green-20
+    'rgba(214, 234, 173, 0.8)',  // apple-green-20
     'rgba(148, 203, 134, 0.8)',  // secondary-green-60
   ];
 
