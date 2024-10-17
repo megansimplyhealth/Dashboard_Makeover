@@ -70,14 +70,14 @@ export default function DashboardHome() {
             </div>
             <div className="flex flex-row h-64 mt-6">
               <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12" style={{ 
-                backgroundImage: `url("../images/quality-man-card.png")`,
+                backgroundImage: `url("../images/month-report-card.png")`,
                 backgroundRepeat: 'no-repeat', 
                 backgroundSize: 'cover',
                 backgroundColor: 'white'}}>
                 <AppCard title={"Monthly Reports"} subTitle={"View your joiners, leavers and monthly income"} description={"x"} buttonText={"View reports"} />
               </div>
               <div className="border border-leaf-green rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12" style={{ 
-                backgroundImage: `url("../images/quality-man-card.png")`,
+                backgroundImage: `url("../images/order-lit-card.png")`,
                 backgroundRepeat: 'no-repeat', 
                 backgroundSize: 'cover',
                 backgroundColor: 'white'}}>
