@@ -1,10 +1,9 @@
 import Head from 'next/head';
 //import styles from '../styles/Global.css';
-import styles from '../styles/Home.module.css';
 import 'tailwindcss/tailwind.css'
-import SearchBar from '../componets/searchBar'
+// import SearchBar from '../componets/searchBar'
 import NavigationBar from '../componets/navigationBar'
-import AccountAvatar from "../componets/accountAvatar";
+// import AccountAvatar from "../componets/accountAvatar";
 import PictureTextButton from "../componets/textButton";
 
 export default function Home() {
@@ -22,6 +21,21 @@ export default function Home() {
       <div className="p-10">
         <NavigationBar />
       </div>
+      <div className="flex justify-center items-center flex-row pt-10 px-10 pb-4 w-full">         
+          <div className="w-10/12">
+            <div className="flex flex-row">
+              <div className="bg-no-repeat border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
+                <p className="text-5xl text-leaf-green-60">APP<br/><strong>ONE</strong></p>
+                <span className="bg-red-300 text-xl text-leaf-green inline-block rounded-full mt-12 px-8 py-2"><strong>CLICK</strong></span>
+              </div>
+
+              <div className="bg-no-repeat border border-leaf-green rounded-xl w-5/12 ml-2 p-6" >
+                <p className="text-5xl ">Paitnet chart <br/><strong>Include sign pateint up button</strong></p>
+                <a href="" className="text-xl text-leaf-green-60 underline hover:no-underline inline-block rounded-full mt-12 px-8 py-2"><strong>CLICK</strong></a>
+              </div>
+            </div>
+            </div>
+            </div>
     </div>
   );
 }
