@@ -117,7 +117,7 @@ export default function DashboardHome() {
         </div>
 
         {/* content section */}
-        <div className="flex justify-center items-center flex-row pt-[23rem] px-10 pb-4">         
+        <div className="flex justify-center items-center flex-row pt-[23rem] px-10 pb-8">         
           <div className="w-10/12">
             <div className="flex flex-row">
               <div className="bg-white border border-grey-2 rounded-xl w-7/12 mr-2 p-6" >
@@ -179,13 +179,18 @@ export default function DashboardHome() {
           </div>
         </div>
 
+        <div className="flex justify-center items-center flex-row pt-4 px-10 border-t-2 border-leaf-green-40 "/>
+
         {/* footer */}
-        <div className="absolute bg-background-grey px-10 py-1 z-10 w-full mt-6 border-t-2 border-leaf-green-40">
-          <div className="flex items-center justify-between py-2 text-5x1 mt-2 bg-background-grey">
-            <div className="flex bg-background-grey">
-            
+        <div className="absolute bg-background-grey px-10 w-full ">
+          <div className="flex items-center justify-center py-2 text-5x1 mt-2 ml-48">
+            <div className="flex items-center">
+            <p className="text-left leading-none">
+              <strong className="text-lg text-leaf-green leading-none underline mr-4">Accessibility</strong><strong className="text-lg text-leaf-green leading-none underline mr-4">Privacy and Legal</strong><strong className="text-lg text-leaf-green leading-none underline mr-4">Frequently Asked Questions</strong><strong className="text-lg text-leaf-green leading-none underline mr-4">Careers</strong><strong className="text-lg text-leaf-green leading-none underline mr-4">Feedback</strong><strong className="text-lg text-leaf-green leading-none underline mr-4">Sitemap</strong><strong className="text-lg text-leaf-green leading-none underline mr-4">Simplyhealth</strong><br />
+              <span className="text-sm text-grey-4 leading-none">Copyright © 2024 Megan Limited | blah blah blah legal stuff | Registered Company Number 12345678 </span>
+            </p>
             </div>
-            <div className="flex items-center mr-2 bg-background-grey">
+            <div className="flex items-center ml-48">
               <Image
                 src="/images/Denplan-B-Corp-Footer.png"
                 alt="Denplan Logo"
@@ -195,7 +200,6 @@ export default function DashboardHome() {
             </div>
           </div>
         </div>
-
       </div>
     );}
 
