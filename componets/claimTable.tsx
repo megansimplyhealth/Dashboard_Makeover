@@ -83,31 +83,31 @@ const StatusBadge: React.FC<{ status: string }> = ({ status }) => {
             <tr>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/5"
+                className="px-6 py-3 text-left text-base text-black font-bold tracking-wider w-1/6"
               >
                 Claim Number
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/5"
+                className="px-6 py-3 text-left text-base text-black font-bold tracking-wider w-1/6"
               >
                 Date
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/5"
+                className="px-6 py-3 text-left text-base text-black font-bold tracking-wider w-2/6"
               >
                 Patient Name
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/5"
+                className="px-6 py-3 text-left text-base text-black font-bold tracking-wider w-1/6"
               >
                 Status
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-1/5"
+                className="px-6 py-3 text-left text-base text-black font-bold tracking-wider w-1/6"
               >
                 Amount
               </th>

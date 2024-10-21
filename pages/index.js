@@ -15,21 +15,77 @@ export default function Home() {
   const claimData = [
     {
       claimId: 12345,
-      date: "2023-09-01",
-      patientFirstname: "Jane",
-      patientLastname: "Cooper",
+      date: "2024-01-01",
+      patientFirstname: "Megan",
+      patientLastname: "Smith",
       status: "Paid",
       amount: 1000,
     },
     {
       claimId: 12346,
-      date: "2023-09-02",
-      patientFirstname: "John",
-      patientLastname: "Doe",
+      date: "2024-02-01",
+      patientFirstname: "Barry",
+      patientLastname: "Smith",
       status: "Declined",
       amount: 500,
     },
-    // Add more claims dynamically as needed
+    {
+      claimId: 12347,
+      date: "2024-03-01",
+      patientFirstname: "Baz",
+      patientLastname: "Smith",
+      status: "Pending",
+      amount: 2000,
+    },
+    {
+      claimId: 12348,
+      date: "2024-04-01",
+      patientFirstname: "Foo",
+      patientLastname: "Smith",
+      status: "Paid",
+      amount: 1000,
+    },
+    {
+      claimId: 12349,
+      date: "2024-04-01",
+      patientFirstname: "Max",
+      patientLastname: "Smith",
+      status: "Paid",
+      amount: 1000,
+    },
+    {
+      claimId: 12350,
+      date: "2024-04-01",
+      patientFirstname: "Megs",
+      patientLastname: "Smith",
+      status: "Paid",
+      amount: 1000,
+    },
+    {
+      claimId: 12351,
+      date: "2024-04-01",
+      patientFirstname: "John",
+      patientLastname: "Smith",
+      status: "Paid",
+      amount: 2000,
+    },
+    {
+      claimId: 12352,
+      date: "2024-04-01",
+      patientFirstname: "Jane",
+      patientLastname: "Smith",
+      status: "Paid",
+      amount: 100,
+    },
+    {
+      claimId: 12353,
+      date: "2024-04-01",
+      patientFirstname: "Smith",
+      patientLastname: "Smith",
+      status: "Declined",
+      amount: 1000
+    },
+
   ];
   
 
@@ -67,8 +123,8 @@ export default function Home() {
                       Create New Claim
                     </button>
                   </div>
-                  <div className="mt-6">
-                    <ClaimTable claims={claimData}/>                    
+                  <div className="mt-6 overflow-auto" style={{ maxHeight: '00px' }}> {/* Set the max height as needed */}
+                    <ClaimTable claims={claimData} />
                   </div>
               </div>
 

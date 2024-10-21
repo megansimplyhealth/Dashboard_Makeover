@@ -11,8 +11,69 @@ import TextButton from "../componets/textButton";
 import App from "next/app";
 import AppCard from "../componets/appCard";
 import BarChart from "../componets/barChart";
+import ClaimTable from "../componets/claimTable";
+
+const claimData = [
+  {
+    claimId: 12345,
+    date: "2024-01-01",
+    patientFirstname: "Megan",
+    patientLastname: "Smith",
+    status: "Paid",
+    amount: 1000,
+  },
+  {
+    claimId: 12346,
+    date: "2024-02-01",
+    patientFirstname: "Barry",
+    patientLastname: "Smith",
+    status: "Declined",
+    amount: 500,
+  },
+  {
+    claimId: 12347,
+    date: "2024-03-01",
+    patientFirstname: "Baz",
+    patientLastname: "Smith",
+    status: "Pending",
+    amount: 2000,
+  },
+  {
+    claimId: 12348,
+    date: "2024-04-01",
+    patientFirstname: "Foo",
+    patientLastname: "Smith",
+    status: "Paid",
+    amount: 1000,
+  },
+  {
+    claimId: 12349,
+    date: "2024-04-01",
+    patientFirstname: "Max",
+    patientLastname: "Smith",
+    status: "Paid",
+    amount: 1000,
+  },
+  {
+    claimId: 12350,
+    date: "2024-04-01",
+    patientFirstname: "Megs",
+    patientLastname: "Smith",
+    status: "Paid",
+    amount: 1000,
+  },
+  {
+    claimId: 12353,
+    date: "2024-04-01",
+    patientFirstname: "Smith",
+    patientLastname: "Smith",
+    status: "Declined",
+    amount: 1000
+  },
+];
 
 export default function DashboardHome() {
+
     return (
       <div className="bg-background-grey min-h-screen">
         
@@ -59,8 +120,8 @@ export default function DashboardHome() {
         <div className="flex justify-center items-center flex-row pt-[23rem] px-10 pb-4">         
           <div className="w-10/12">
             <div className="flex flex-row">
-              <div className="bg-no-repeat  border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
-                <div className="flex justify-between items-center">
+              <div className="bg-white  border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
+              <div className="flex justify-between items-center">
                     <p className="text-left leading-none">
                       <strong className="text-5xl text-black leading-none font-bold">Claims</strong><br />
                       {/* <span className="text-xl text-leaf-green-80 leading-none font-bold">Insert Sub Yext</span> */}
@@ -69,10 +130,10 @@ export default function DashboardHome() {
                       Create New Claim
                     </button>
                   </div>
-                  <div className="mt-6">
-                    
+                  <div className="mt-4 overflow-auto" style={{ maxHeight: '300px' }}> {/* Set the max height as needed */}
+                    <ClaimTable claims={claimData} />
                   </div>
-                </div>
+              </div>
 
               <div className="bg-no-repeat bg-white border border-leaf-green rounded-xl w-5/12 ml-2 p-6" >
                 <div className="flex justify-between items-center">
@@ -85,7 +146,7 @@ export default function DashboardHome() {
                     </button>
                   </div>
                   <div className="mt-6">
-                    <BarChart // TO DO MAKE CHART FLO TO EDGE OF BOX
+                    <BarChart 
                       months={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']} 
                       patientNumbers={[2000, 1900, 2010, 2040, 2003, 2134, 2200,]} 
                     />
@@ -137,3 +198,5 @@ export default function DashboardHome() {
 
       </div>
     );}
+
+    
