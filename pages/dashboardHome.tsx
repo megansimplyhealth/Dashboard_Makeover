@@ -120,7 +120,7 @@ export default function DashboardHome() {
         <div className="flex justify-center items-center flex-row pt-[23rem] px-10 pb-4">         
           <div className="w-10/12">
             <div className="flex flex-row">
-              <div className="bg-white border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
+              <div className="bg-white border border-grey-2 rounded-xl w-7/12 mr-2 p-6" >
               <div className="flex justify-between items-center">
                     <p className="text-left leading-none">
                       <strong className="text-5xl text-black leading-none font-bold">Claims</strong><br />
@@ -135,7 +135,7 @@ export default function DashboardHome() {
                   </div>
               </div>
 
-              <div className="bg-no-repeat bg-white border border-leaf-green rounded-xl w-5/12 ml-2 p-6" >
+              <div className="bg-no-repeat bg-white border border-grey-2 rounded-xl w-5/12 ml-2 p-6" >
                 <div className="flex justify-between items-center">
                     <p className="text-left leading-none">
                       <strong className="text-5xl text-black leading-none font-bold">2,134</strong><br />
@@ -154,21 +154,21 @@ export default function DashboardHome() {
                 </div>
             </div>
             <div className="flex flex-row h-64 mt-6">
-              <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12" style={{ 
+              <div className="border border-grey-2 rounded-xl shadow-lg px-6 py-4 w-4/12" style={{ 
                 backgroundImage: `url("../images/month-report-card.png")`,
                 backgroundRepeat: 'no-repeat', 
                 backgroundSize: 'cover',
                 backgroundColor: 'white'}}>
                 <AppCard title={"Monthly Reports"} subTitle={"View your joiners, leavers and monthly income"} description={"x"} buttonText={"View reports"} />
               </div>
-              <div className="border border-leaf-green rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12" style={{ 
+              <div className="border border-grey-2 rounded-xl shadow-lg mx-6 px-6 py-4 w-4/12" style={{ 
                 backgroundImage: `url("../images/order-lit-card.png")`,
                 backgroundRepeat: 'no-repeat', 
                 backgroundSize: 'cover',
                 backgroundColor: 'white'}}>
                 <AppCard title={"Order Literature Online"} subTitle={"Order stock to a practice through our hub"} description={"x"} buttonText={"Order here"} />
               </div>
-              <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12" style={{ 
+              <div className="border border-grey-2 rounded-xl shadow-lg px-6 py-4 w-4/12" style={{ 
                 backgroundImage: `url("../images/quality-man-card.png")`,
                 backgroundRepeat: 'no-repeat', 
                 backgroundSize: 'cover',
