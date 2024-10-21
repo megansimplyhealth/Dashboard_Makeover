@@ -41,9 +41,11 @@ module.exports = withMT({
       'error-red' : '#e02020',      
       'error-red-20' : '#ff6969',
       'error-red-8' : '#fdeeee',
+      'error-red-dark' : '#850505',
 
       'alert-yellow' : '#f7ec67',
       'alert-yellow-40' : '#fcf7c2',
+      'alert-yellow-dark' : '#D6CC5A',
     },
   },
   variants: {

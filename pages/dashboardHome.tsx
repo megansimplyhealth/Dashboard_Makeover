@@ -120,7 +120,7 @@ export default function DashboardHome() {
         <div className="flex justify-center items-center flex-row pt-[23rem] px-10 pb-4">         
           <div className="w-10/12">
             <div className="flex flex-row">
-              <div className="bg-white  border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
+              <div className="bg-white border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
               <div className="flex justify-between items-center">
                     <p className="text-left leading-none">
                       <strong className="text-5xl text-black leading-none font-bold">Claims</strong><br />
@@ -130,7 +130,7 @@ export default function DashboardHome() {
                       Create New Claim
                     </button>
                   </div>
-                  <div className="mt-4 overflow-auto" style={{ maxHeight: '300px' }}> {/* Set the max height as needed */}
+                  <div className="mt-4 overflow-auto" style={{ maxHeight: '300px' }}>
                     <ClaimTable claims={claimData} />
                   </div>
               </div>
