@@ -6,8 +6,32 @@ import NavigationBar from '../componets/navigationBar'
 // import AccountAvatar from "../componets/accountAvatar";
 import PictureTextButton from "../componets/textButton";
 import BarChart from '../componets/barChart';
+import ClaimTable from '../componets/claimTable';
+
+
 
 export default function Home() {
+
+  const claimData = [
+    {
+      claimId: 12345,
+      date: "2023-09-01",
+      patientFirstname: "Jane",
+      patientLastname: "Cooper",
+      status: "Paid",
+      amount: 1000,
+    },
+    {
+      claimId: 12346,
+      date: "2023-09-02",
+      patientFirstname: "John",
+      patientLastname: "Doe",
+      status: "Declined",
+      amount: 500,
+    },
+    // Add more claims dynamically as needed
+  ];
+  
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-apple-green-20 text-2xl">
@@ -34,8 +58,18 @@ export default function Home() {
           <div className="w-10/12">
             <div className="flex flex-row">
               <div className="bg-no-repeat border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
-                <p className="text-5xl text-leaf-green-60">APP<br/><strong>ONE</strong></p>
-                <span className="bg-red-300 text-xl text-leaf-green inline-block rounded-full mt-12 px-8 py-2"><strong>CLICK</strong></span>
+              <div className="flex justify-between items-center">
+                    <p className="text-left leading-none">
+                      <strong className="text-5xl text-black leading-none font-bold">Claims</strong><br />
+                      {/* <span className="text-xl text-leaf-green-80 leading-none font-bold">Insert Sub Yext</span> */}
+                    </p>
+                    <button className="bg-apple-green rounded-full shadow-lg text-white text-lg font-bold py-2 px-4">
+                      Create New Claim
+                    </button>
+                  </div>
+                  <div className="mt-6">
+                    <ClaimTable claims={claimData}/>                    
+                  </div>
               </div>
 
               <div className="bg-white border border-leaf-green rounded-xl w-5/12 ml-2 p-6">

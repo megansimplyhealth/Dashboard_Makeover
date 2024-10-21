@@ -16,16 +16,16 @@ const AppCard = (props: CardProps) => {
 
     return (
         <div className="relative bg-transparent">
-            <p className="text-left">
+            <p className="text-left pb-2">
                 <strong className="text-4xl text-black">{props.title}</strong>
             </p>
-            <div className="flex border-b-2 border-leaf-green pb-2 "/>
-            <p className="text-left mt-1">
+            <div className="flex border border-b-2 border-leaf-green"/>
+            <p className="text-left mt-">
                 <strong className="text-lg text-leaf-green">{props.subTitle}</strong><br />
                 {/* <span className="text-base text-leaf-green leading-none">{props.description}</span> */}
             </p>
-            <div className="flex bg-transparent justify-end items-center mt-6"/>
-            <div className="flex bg-transparent justify-end items-center mt-20">
+            <div className="flex bg-transparent justify-end items-end mt-12"/>
+            <div className="flex bg-transparent justify-end items-end mt-12">
                 <button className="bg-apple-green rounded-full shadow-lg text-white text-lg py-2 px-4 font-bold" onClick={() => {}}>
                     {props.buttonText}
                 </button>

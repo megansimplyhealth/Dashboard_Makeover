@@ -37,6 +37,10 @@ module.exports = withMT({
 
       'black' : '#000000',
       'white' : '#ffffff',
+
+      'error-red' : '#e02020',      
+      'error-red-20' : '#ff6969',
+      'error-red-8' : '#fdeeee',
     },
   },
   variants: {

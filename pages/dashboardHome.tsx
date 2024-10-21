@@ -59,28 +59,38 @@ export default function DashboardHome() {
         <div className="flex justify-center items-center flex-row pt-[23rem] px-10 pb-4">         
           <div className="w-10/12">
             <div className="flex flex-row">
-              <div className="bg-no-repeat border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
-                <p className="text-5xl text-leaf-green-60">APP<br/><strong>ONE</strong></p>
-                <span className="bg-red-300 text-xl text-leaf-green inline-block rounded-full mt-12 px-8 py-2"><strong>CLICK</strong></span>
-              </div>
+              <div className="bg-no-repeat  border border-leaf-green rounded-xl w-7/12 mr-2 p-6" >
+                <div className="flex justify-between items-center">
+                    <p className="text-left leading-none">
+                      <strong className="text-5xl text-black leading-none font-bold">Claims</strong><br />
+                      {/* <span className="text-xl text-leaf-green-80 leading-none font-bold">Insert Sub Yext</span> */}
+                    </p>
+                    <button className="bg-apple-green rounded-full shadow-lg text-white text-lg font-bold py-2 px-4">
+                      Create New Claim
+                    </button>
+                  </div>
+                  <div className="mt-6">
+                    
+                  </div>
+                </div>
 
-              <div className="bg-no-repeat border border-leaf-green rounded-xl w-5/12 ml-2 p-6" >
-              <div className="flex justify-between items-center">
-                  <p className="text-left leading-none">
-                    <strong className="text-5xl text-leaf-green leading-none font-bold">2,134</strong><br />
-                    <span className="text-xl text-leaf-green-80 leading-none font-bold">Currently Active Patients</span>
-                  </p>
-                  <button className="bg-apple-green rounded-full shadow-lg text-white text-lg font-bold py-2 px-4">
-                    + Sign New
-                  </button>
+              <div className="bg-no-repeat bg-white border border-leaf-green rounded-xl w-5/12 ml-2 p-6" >
+                <div className="flex justify-between items-center">
+                    <p className="text-left leading-none">
+                      <strong className="text-5xl text-black leading-none font-bold">2,134</strong><br />
+                      <span className="text-xl text-leaf-green-80 leading-none font-bold">Currently Active Patients</span>
+                    </p>
+                    <button className="bg-apple-green rounded-full shadow-lg text-white text-lg font-bold py-2 px-4">
+                      + Sign New
+                    </button>
+                  </div>
+                  <div className="mt-6">
+                    <BarChart // TO DO MAKE CHART FLO TO EDGE OF BOX
+                      months={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']} 
+                      patientNumbers={[2000, 1900, 2010, 2040, 2003, 2134, 2200,]} 
+                    />
+                  </div>
                 </div>
-                <div className="mt-6">
-                  <BarChart 
-                    months={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']} 
-                    patientNumbers={[2000, 1900, 2010, 2040, 2003, 2134]} 
-                  />
-                </div>
-              </div>
             </div>
             <div className="flex flex-row h-64 mt-6">
               <div className="border border-leaf-green rounded-xl shadow-lg px-6 py-4 w-4/12" style={{ 
