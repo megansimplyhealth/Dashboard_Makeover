@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css'
-import { CloseOutlined, DoneOutlined } from '@material-ui/icons';
+import { CloseOutlined, DoneOutlined, CachedOutlined } from '@material-ui/icons';
 import { useState } from 'react';
 
 type claimPropsType = {
@@ -12,14 +12,52 @@ type claimPropsType = {
     onClick?: (event: React.ChangeEvent<HTMLInputElement>) => void
   };
 
+  type ClaimTableProps = {
+    claims: claimPropsType[];
+  };
+
   type statusType = {
     status: string,
     backgroundColour: string,
     textColour: string,
     icon: JSX.Element
   };
-  type ClaimTableProps = {
-    claims: claimPropsType[];
+
+  const statusList: statusType[] = [
+    {
+        status: 'Paid',
+        backgroundColour: 'secondary-green-20',
+        textColour: 'secondary-green',
+        icon: <DoneOutlined/>
+    }, 
+    {
+        status: 'Declined',
+        backgroundColour: 'error-red-20',
+        textColour: 'error-red',
+        icon: <CloseOutlined/>
+    },
+    {
+        status: 'Pending',
+        backgroundColour: 'alert-yellow-40',
+        textColour: 'alert-yellow',
+        icon: <CachedOutlined/>
+    },
+];
+
+const StatusBadge: React.FC<{ status: string }> = ({ status }) => {
+    const statusObj = statusList.find((s) => s.status === status);
+  
+    if (!statusObj) {
+      return null;
+    }
+  
+    return (
+      <span
+        className={`inline-flex items-center px-2 py-1 text-xs font-semibold leading-5 rounded-full`} style={{backgroundColor: statusObj.backgroundColour, color: statusObj.textColour}}>
+        <span className="text-xs">{statusObj.icon}</span>
+        <span className="ml-1 text-sm">{statusObj.status}</span>
+      </span>
+    );
   };
   
   const ClaimTable: React.FC<ClaimTableProps> = (props) => {
@@ -94,7 +132,7 @@ type claimPropsType = {
                   {`${claim.patientFirstname} ${claim.patientLastname}`}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                  {claim.status}
+                    <StatusBadge status={claim.status || ""} />
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                   {claim.amount ? `£${claim.amount.toFixed(2)}` : "N/A"}
