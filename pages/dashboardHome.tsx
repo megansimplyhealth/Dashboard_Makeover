@@ -4,11 +4,7 @@ import 'tailwindcss/tailwind.css'
 import SearchBar from '../componets/searchBar'
 import NavigationBar from '../componets/navigationBar'
 import AccountAvatar from "../componets/accountAvatar";
-import { IconButton } from "@material-ui/core";
-import { ArrowBackOutlined, ArrowForwardOutlined } from '@material-ui/icons';
 import DynamicBanner from "../componets/dynamicBanner";
-import TextButton from "../componets/textButton";
-import App from "next/app";
 import AppCard from "../componets/appCard";
 import BarChart from "../componets/barChart";
 import ClaimTable from "../componets/claimTable";

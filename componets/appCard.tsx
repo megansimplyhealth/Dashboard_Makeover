@@ -1,8 +1,4 @@
 import 'tailwindcss/tailwind.css'
-import { Button, IconButton } from "@material-ui/core";
-import { ArrowBackOutlined, ArrowForwardOutlined } from '@material-ui/icons';
-import Image from 'next/image';
-import TextButton from './textButton';
 
 interface CardProps {
     title: string,
