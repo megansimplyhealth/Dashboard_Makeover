@@ -96,7 +96,7 @@ export default function DashboardHome() {
 
         {/* banner */}
         <div className="absolute h-32 w-full mt-24">
-          <DynamicBanner image={[{src: '/images/denplan-bike.png', link: null}, {src: "/images/DenplanSummit2025.png", link: "https://www.denplan.co.uk/dentists/events/the-denplan-summit-2025.html"}]} />
+          <DynamicBanner image={[{src: '/images/denplan-bike.png', link: 'https://www.denplan.co.uk/the-core/industry-and-company-news/cycling-conference'}, {src: "/images/DenplanSummit2025.png", link: "https://www.denplan.co.uk/dentists/events/the-denplan-summit-2025.html"}]} />
         </div>
 
         <div className="absolute w-full mt-64 border-t-2 border-leaf-green-40"/>

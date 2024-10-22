@@ -37,6 +37,7 @@ const DynamicBanner = (props: BannerProps) => {
           </div>
 
           <div className="flex items-center justify-center ml-4">
+            <a className="flex items-center justify-center" href={props.image[0].link}>
             <Image
                 src={props.image[0].src}
                 alt="Denplan Summit 2025 Event Banner"
@@ -44,6 +45,9 @@ const DynamicBanner = (props: BannerProps) => {
                 height={50}
                 className="rounded-xl ml-5 mr-5 border border-grey shadow-lg"
             />
+            </a>
+
+            <a className="flex items-center justify-center" href={props.image[1].link}>
             <Image
               src={props.image[1].src}
               alt="Denplan Summit 2025 Event Banner"
@@ -51,6 +55,7 @@ const DynamicBanner = (props: BannerProps) => {
               height={50}
               className="rounded-xl border border-grey shadow-lg"
             />
+            </a>
 
           </div>
   
