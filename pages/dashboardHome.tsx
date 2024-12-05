@@ -4,11 +4,7 @@ import 'tailwindcss/tailwind.css'
 import SearchBar from '../componets/searchBar'
 import NavigationBar from '../componets/navigationBar'
 import AccountAvatar from "../componets/accountAvatar";
-import { IconButton } from "@material-ui/core";
-import { ArrowBackOutlined, ArrowForwardOutlined } from '@material-ui/icons';
 import DynamicBanner from "../componets/dynamicBanner";
-import TextButton from "../componets/textButton";
-import App from "next/app";
 import AppCard from "../componets/appCard";
 import BarChart from "../componets/barChart";
 import ClaimTable from "../componets/claimTable";
@@ -100,7 +96,7 @@ export default function DashboardHome() {
 
         {/* banner */}
         <div className="absolute h-32 w-full mt-24">
-          <DynamicBanner image={[{src: '/images/denplan-bike.png', link: null}, {src: "/images/DenplanSummit2025.png", link: "https://www.denplan.co.uk/dentists/events/the-denplan-summit-2025.html"}]} />
+          <DynamicBanner image={[{src: '/images/denplan-bike.png', link: 'https://www.denplan.co.uk/the-core/industry-and-company-news/cycling-conference'}, {src: "/images/DenplanSummit2025.png", link: "https://www.denplan.co.uk/dentists/events/the-denplan-summit-2025.html"}]} />
         </div>
 
         <div className="absolute w-full mt-64 border-t-2 border-leaf-green-40"/>

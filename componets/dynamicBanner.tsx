@@ -17,13 +17,17 @@ const DynamicBanner = (props: BannerProps) => {
 
   return (
     <div className="absolute w-full h-full flex items-center justify-center">
-      <div className="flex items-center justify-between w-full px-10 py-4 ml-5">
+      <div className="flex items-center justify-between w-full px-10 py-4">
         
         <div className="flex items-center"> 
           <div className="h-28">
-            <p className="text-left leading-none">
-              <strong className="text-3xl text-black">Practice news</strong><br />
-              <span className="text-xs text-grey-4 leading-none">Stay on top of all upcoming events, <br /> practice statistics and marketing tips.</span>
+            <strong className="text-5xl text-black">Practice News</strong> {/* Keep "Practice News" as is */}
+            
+            <p className="text-left leading-none mt-2">
+              <span className="text-base text-grey-4 leading-none mt-2">
+                Stay on top of all upcoming events, practice<br /> {/* Line break after "practice" */}
+                revenue statistics and marketing tips.
+              </span>
             </p>
   
             <div className="flex space-x-2 mt-2">
@@ -37,28 +41,33 @@ const DynamicBanner = (props: BannerProps) => {
           </div>
 
           <div className="flex items-center justify-center ml-4">
-            <Image
+            <a className="flex items-center justify-center" href={props.image[0].link}>
+              <Image
                 src={props.image[0].src}
                 alt="Denplan Summit 2025 Event Banner"
                 width={650}
                 height={50}
                 className="rounded-xl ml-5 mr-5 border border-grey shadow-lg"
-            />
-            <Image
-              src={props.image[1].src}
-              alt="Denplan Summit 2025 Event Banner"
-              width={650}
-              height={50}
-              className="rounded-xl border border-grey shadow-lg"
-            />
-
-          </div>
+              />
+            </a>
   
+            {/* <a className="flex items-center justify-center" href={props.image[1].link}>
+              <Image
+                src={props.image[1].src}
+                alt="Denplan Summit 2025 Event Banner"
+                width={650}
+                height={50}
+                className="rounded-xl border border-grey shadow-lg"
+              />
+            </a> */}
+          </div>
         </div>
         
       </div>
     </div>
   );
+  
+  
   
 }
 
